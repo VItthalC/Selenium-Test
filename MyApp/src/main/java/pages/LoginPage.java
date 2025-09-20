@@ -36,6 +36,7 @@ public class LoginPage {
 		return message;
 	}
 	public void loginAs(String userName,String pass) {
+		System.out.println("Loging as UserName:"+userName+" Password:"+pass);
 		enterUserName(userName);
 		enterPassword(pass);
 		clickLoginButton();
