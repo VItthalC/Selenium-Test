@@ -16,7 +16,7 @@
     <maven.compiler.release>17</maven.compiler.release>
   </properties>
 
-  <dependencyManagement>
+  <!--<dependencyManagement>
     <dependencies>
       <dependency>
         <groupId>org.junit</groupId>
@@ -27,19 +27,19 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-
+-->
   <dependencies>
-    <dependency>
+    <!--<dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
       <scope>test</scope>
     </dependency>
-    <!-- Optionally: parameterized tests support -->
+     Optionally: parameterized tests support 
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-params</artifactId>
       <scope>test</scope>
-    </dependency>
+    </dependency>-->
     <!-- Selenium -->
     <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
@@ -94,13 +94,10 @@
           <version>3.13.0</version>
         </plugin>
         <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.3.0</version>
-          <configuration>
-          	<suiteXmlFiles>
-          		<suiteXmlFile>testng.xml</suiteXmlFile>
-          	</suiteXmlFiles>
-          </configuration>
+          
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
@@ -124,6 +121,20 @@
           <version>3.6.1</version>
         </plugin>
       </plugins>
+      
     </pluginManagement>
+     <plugins>
+        <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+        <plugin>
+   		<groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          
+          <configuration>
+          	<suiteXmlFiles>
+          		<suiteXmlFile>testng.xml</suiteXmlFile>
+          	</suiteXmlFiles>
+          </configuration>
+          </plugin>
+      </plugins>
   </build>
 </project>
