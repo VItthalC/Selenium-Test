@@ -12,6 +12,7 @@
   	<classes>
   		<class name="com.Swaglabs.app.MyApp.LoginTest"></class>
   		<class name="com.Swaglabs.app.MyApp.TestInvalidLogin"></class>
+  		<class name="com.Swaglabs.app.MyApp.InventoryTest"></class>
   		
   	</classes>
   </test>
