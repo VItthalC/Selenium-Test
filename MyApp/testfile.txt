@@ -1,1 +1,2 @@
 this is first commit
+i have added code for bug 3
